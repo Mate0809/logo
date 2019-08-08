@@ -1,0 +1,105 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.nav {
+    text-align: center;
+    width: 95%;
+    height: 30px;
+    margin-left: 2.5%;
+}
+
+.text {
+    font-size: 20px;
+    font-weight: bold;  
+}
+
+
+.box {
+    background: black;
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 0;
+    padding-top: 10%;
+    width: 95%;
+    height: 500px;
+    
+    filter: brightness(200%);
+    
+}
+
+.logo {
+    background: transparent;
+    color: white;
+    font-size: 250px;
+    text-transform: uppercase;
+    font-weight: 900;
+    display: block;
+    text-align: center;
+
+
+    animation: logoAnimation 5s 1;
+}
+
+.logo::before {
+    content: "logo";
+    position: absolute;
+    mix-blend-mode: difference;
+    filter: blur(3px);
+}
+
+.slogan {
+    color: white;
+    background: black;
+    font-size: 60px;
+    font-weight: 500;
+    display: block;
+    visibility: hidden;
+    text-align: center;
+
+    animation: sloganAnimation 3s 3s 1; /* Duration - Delay - Iteration */
+    animation-fill-mode: forwards; /* Retain the computed values set by the last keyframe */
+}
+
+.gradient {
+    background: linear-gradient(133.7395418614667deg, rgba(249, 63, 72,1) 6.157770800627944%,rgba(250, 183, 121,1) 95.48273155416011%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    mix-blend-mode: multiply;
+}
+
+
+@keyframes logoAnimation {
+    from {
+        color: #fff;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+@keyframes sloganAnimation {
+    from {
+        visibility: visible;
+        transform: scale(0);
+    }
+    to {
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+.footer {
+    width: 95%;
+    height: 30px;
+    text-align: right;
+    text-transform: uppercase;
+    margin-left: 2.5%;
+}
